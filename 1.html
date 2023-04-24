@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>淡蓝色动态渐变搜索框</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background: linear-gradient(to bottom, #99ccff 0%, #ffffff 100%);
+			animation: gradient 5s infinite;
+			font-family: Arial, sans-serif;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+		@keyframes gradient {
+			0% {
+				background-position: 0 0;
+			}
+			50% {
+				background-position: 100% 0;
+			}
+			100% {
+				background-position: 0 0;
+			}
+		}
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin-top: -50px; /* 向上移动50像素 */
+		}
+		h1 {
+			font-size: 32px;
+			margin: 0 0 20px 0;
+			color: #333;
+			text-transform: uppercase;
+		}
+		input[type="text"] {
+			padding: 10px;
+			font-size: 16px;
+			border-radius: 30px;
+			border: none;
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s ease-in-out;
+			width: 250px;
+		}
+		input[type="text"]:focus {
+			transform: scale(1.2);
+			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+			outline: none;
+		}
+		@media screen and (max-width: 768px) {
+			input[type="text"] {
+				width: 80%;
+			}
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<form action="https://www.baidu.com/s" method="GET">
+			<h2>Reduced Search</h2>
+			<br />
+			<br />
+			<input type="text" name="wd" placeholder="Search Content" autocomplete="off">
+		</form>
+	</div>
+</body>
+</html>
